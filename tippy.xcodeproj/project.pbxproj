@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF9763BB1D10B529000CB715 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9763BA1D10B528000CB715 /* SettingsViewController.swift */; };
 		CFCA650A1D10A22B000E1FD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA65091D10A22B000E1FD3 /* AppDelegate.swift */; };
 		CFCA650C1D10A22B000E1FD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCA650B1D10A22B000E1FD3 /* ViewController.swift */; };
 		CFCA650F1D10A22B000E1FD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFCA650D1D10A22B000E1FD3 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF9763BA1D10B528000CB715 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CFCA65061D10A22B000E1FD3 /* tippy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tippy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFCA65091D10A22B000E1FD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFCA650B1D10A22B000E1FD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				CFCA65091D10A22B000E1FD3 /* AppDelegate.swift */,
 				CFCA650B1D10A22B000E1FD3 /* ViewController.swift */,
 				CFCA650D1D10A22B000E1FD3 /* Main.storyboard */,
+				CF9763BA1D10B528000CB715 /* SettingsViewController.swift */,
 				CFCA65101D10A22B000E1FD3 /* Assets.xcassets */,
 				CFCA65121D10A22B000E1FD3 /* LaunchScreen.storyboard */,
 				CFCA65151D10A22B000E1FD3 /* Info.plist */,
@@ -258,6 +261,7 @@
 			files = (
 				CFCA650C1D10A22B000E1FD3 /* ViewController.swift in Sources */,
 				CFCA650A1D10A22B000E1FD3 /* AppDelegate.swift in Sources */,
+				CF9763BB1D10B529000CB715 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +486,7 @@
 				CFCA65301D10A22C000E1FD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CFCA65311D10A22C000E1FD3 /* Build configuration list for PBXNativeTarget "tippyTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +495,7 @@
 				CFCA65331D10A22C000E1FD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CFCA65341D10A22C000E1FD3 /* Build configuration list for PBXNativeTarget "tippyUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +504,7 @@
 				CFCA65361D10A22C000E1FD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
