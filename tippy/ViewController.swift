@@ -17,25 +17,32 @@ class ViewController: UIViewController {
     var tipPercentages = [18, 20, 25]
     
     let defaults = NSUserDefaults.standardUserDefaults()
+    
+    var appFinishedLoading = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        /*let lastClosed = defaults.doubleForKey("lastClosed")
-        if lastClosed != 0 {
-            if NSTimeIntervalSince1970 < (lastClosed + 5) {
-                if let lastBillField = defaults.stringForKey("lastBillField") {
-                    billField.text = lastBillField
-                    calculateTip()
-                }
-            }
-        }*/
         
         billField.becomeFirstResponder()
     }
     
     override func viewWillAppear(animated: Bool) {
         loadTipPercentages()
+        
+        if !appFinishedLoading {
+            let lastClosed = defaults.doubleForKey("lastClosed")
+            if lastClosed != 0 {
+                if NSDate.timeIntervalSinceReferenceDate() < (lastClosed + 600) {
+                    if let lastBillField = defaults.stringForKey("lastBillField") {
+                        billField.text = lastBillField
+                        calculateTip()
+                    }
+                }
+            }
+            appFinishedLoading = true
+        }
+        
         calculateTip()
     }
     
@@ -51,12 +58,14 @@ class ViewController: UIViewController {
     func calculateTip() {
         let bill = Double(billField.text!) ?? 0
         
-        /*if let text = billField.text {
-            defaults.setObject(text, forKey: "lastBillField")
-            defaults.setDouble(NSTimeIntervalSince1970, forKey: "lastClosed")
-            defaults.synchronize()
+        if appFinishedLoading {
+            if let text = billField.text {
+                defaults.setObject(text, forKey: "lastBillField")
+                defaults.setDouble(NSDate.timeIntervalSinceReferenceDate(), forKey: "lastClosed")
+                defaults.synchronize()
+            }
         }
-        */
+ 
         let tip = bill * Double(tipPercentages[tipControl.selectedSegmentIndex]) / 100.0
         let total = bill + tip
         
